@@ -3,7 +3,7 @@ require("custom.lazy")
 local set = vim.opt
 set.shiftwidth = 4
 set.number = true
-set.relativenumber = true 
+set.relativenumber = true
 set.clipboard = "unnamedplus"
 
 vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
@@ -20,3 +20,14 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 	vim.highlight.on_yank()
     end,
 })
+
+vim.diagnostic.config({
+    virtual_text = {
+	spacing = 2,
+	source = "if_many",
+    },
+    signs = false,
+    underline = false,
+    severity_sort = true,
+})
+
