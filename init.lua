@@ -2,6 +2,11 @@ require("custom.lazy")
 
 local set = vim.opt
 set.shiftwidth = 4
+set.tabstop = 4
+set.softtabstop = 4
+set.expandtab = true
+set.smartindent = true
+set.shiftround = true
 set.number = true
 set.relativenumber = true
 set.clipboard = "unnamedplus"
