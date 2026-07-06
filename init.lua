@@ -11,6 +11,7 @@ set.number = true
 set.relativenumber = true
 set.clipboard = "unnamedplus"
 
+vim.keymap.set("n", "<space>e", vim.diagnostic.open_float)
 vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
 vim.keymap.set("n", "<space>x", ":.lua<CR>")
 vim.keymap.set("v", "<space>x", ":lua<CR>")
@@ -31,8 +32,8 @@ vim.diagnostic.config({
 	spacing = 2,
 	source = "if_many",
     },
-    signs = false,
-    underline = false,
+    signs = true,
+    underline = true,
     severity_sort = true,
 })
 

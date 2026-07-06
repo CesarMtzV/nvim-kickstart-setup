@@ -18,6 +18,15 @@ return {
 
             -- PYTHON
             vim.lsp.enable("pyright")
+            vim.lsp.config("pyright", {
+                settings = {
+                    python = {
+                        analysis = {
+                            typeCheckingMode = "standard",
+                        }
+                    }
+                }
+            })
             vim.lsp.enable("prismals")
 
             -- C
